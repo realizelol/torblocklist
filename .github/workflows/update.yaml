@@ -16,12 +16,22 @@ jobs:
         with:
           fetch-depth: 1
       - name: Get IPv4 exit_addresses + or_addresses, delete ports and sort-unique output
-        run:  curl -s 'https://onionoo.torproject.org/details?flag=Exit&fields=exit_addresses,or_addresses' | grep -Po '[[,]"\K[^"]*' | grep -v 'or_addresses\|exit_addresses' | sed "s/:[0-9]*$//g" | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort -Vu > exits-ipv4.txt
+        run:  |
+          curl -s 'https://onionoo.torproject.org/details?flag=Exit&fields=exit_addresses,or_addresses' 2>/dev/null \
+          | grep -Po '[[,]"\K[^"]*' | grep -v 'or_addresses\|exit_addresses' | sed "s/:[0-9]*$//g" \
+          | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort -Vu > exits-ipv4.txt; \
+          if [ $( grep -coE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" exits-ipv4.txt) -le 1000 ]; then \
+          rm -f exits-ipv4.txt; fi # if empty delete file, so it shouldnt be updated
       - name: Get IPv6 exit_addresses + or_addresses, delete ports and sort-unique output
-        run:  curl -s 'https://onionoo.torproject.org/details?flag=Exit&fields=exit_addresses,or_addresses' | grep -Po '[[,]"\K[^"]*' | grep -v 'or_addresses\|exit_addresses' | sed "s/:[0-9]*$//g" | grep -oE "\b([a-f0-9:]+:+)+[a-f0-9]+\b" | sort -Vu > exits-ipv6.txt
+        run:  |
+          curl -s 'https://onionoo.torproject.org/details?flag=Exit&fields=exit_addresses,or_addresses' 2>/dev/null \
+          | grep -Po '[[,]"\K[^"]*' | grep -v 'or_addresses\|exit_addresses' | sed "s/:[0-9]*$//g" \
+          | grep -oE "\b([a-f0-9:]+:+)+[a-f0-9]+\b" | sort -Vu > exits-ipv6.txt;
+          if [ $( grep -coE "\b([a-f0-9:]+:+)+[a-f0-9]+\b" exits-ipv4.txt) -le 500 ]; then \
+          rm -f exits-ipv6.txt; fi # if empty delete file, so it shouldnt be updated
       - name: Upload Stuff to GitHub via https://github.com/stefanzweifel/git-auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: '*.txt'
           disable_globbing: true
-          commit_message: Update exits-ipv{4,6}.txt
+          commit_message: Update TOR Lists - ${{ github.event.repository.updated_at}}
