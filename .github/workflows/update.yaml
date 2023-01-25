@@ -20,14 +20,14 @@ jobs:
           tor_ipv4=$(curl -s 'https://onionoo.torproject.org/details?flag=Exit&fields=exit_addresses,or_addresses' 2>/dev/null \
           | grep -Po '[[,]"\K[^"]*' | grep -v 'or_addresses\|exit_addresses' | sed "s/:[0-9]*$//g" \
           | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort -Vu); \
-          if [ $(echo "${tor_ipv4} | grep -coE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b") -ge 1000 ]; then \
+          if [ $(echo "${tor_ipv4}" | grep -coE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b") -ge 1000 ]; then \
           echo "${tor_ipv4}" > exits-ipv4.txt;fi #update file only if there are enough ipv4 found
       - name: Get IPv6 exit_addresses + or_addresses, delete ports and sort-unique output
         run:  |
           tor_ipv6=$(curl -s 'https://onionoo.torproject.org/details?flag=Exit&fields=exit_addresses,or_addresses' 2>/dev/null \
           | grep -Po '[[,]"\K[^"]*' | grep -v 'or_addresses\|exit_addresses' | sed "s/:[0-9]*$//g" \
           | grep -oE "\b([a-f0-9:]+:+)+[a-f0-9]+\b" | sort -Vu);
-          if [ $(echo "${tor_ipv6} | grep -coE "\b([a-f0-9:]+:+)+[a-f0-9]+\b") -ge 500 ]; then \
+          if [ $(echo "${tor_ipv6}" | grep -coE "\b([a-f0-9:]+:+)+[a-f0-9]+\b") -ge 500 ]; then \
           echo "${tor_ipv6}" > exits-ipv6.txt;fi #update file only if there are enough ipv6 found
       - name: Upload Stuff to GitHub via https://github.com/stefanzweifel/git-auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
