@@ -17,8 +17,3 @@ Additionally, my hosting bills, budget, and financial priorities have changed. W
 This list is no longer supported and the user-agent has already been blocked by torproject. (output are 0b files)
 
 So I decided to do this job via github workflow.
-
-<br/>
-
-## Status
-#### BETA - if it's working I will PR it to oWRT - banIP.
