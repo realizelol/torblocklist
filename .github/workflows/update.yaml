@@ -31,7 +31,7 @@ jobs:
           echo "${tor_ipv6}" > exits-ipv6.txt;fi #update file only if there are enough ipv6 found
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d - %H:%M%:S')"
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d - %H:%M:%S')"
       - name: Upload Stuff to GitHub via https://github.com/stefanzweifel/git-auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
