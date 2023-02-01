@@ -5,7 +5,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: "0 0 * * *" # Run every day at 00:00
+    - cron: "00 0,6,12,18 * * *"
 
 jobs:
   update:
@@ -29,9 +29,12 @@ jobs:
           | grep -oE "\b([a-f0-9:]+:+)+[a-f0-9]+\b" | sort -Vu);
           if [ $(echo "${tor_ipv6}" | grep -coE "\b([a-f0-9:]+:+)+[a-f0-9]+\b") -ge 500 ]; then \
           echo "${tor_ipv6}" > exits-ipv6.txt;fi #update file only if there are enough ipv6 found
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d - %H:%M%:S')"
       - name: Upload Stuff to GitHub via https://github.com/stefanzweifel/git-auto-commit-action
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: '*.txt'
           disable_globbing: true
-          commit_message: Update TOR Lists - ${{ github.event.repository.updated_at}}
+          commit_message: Update TOR Lists - ${{ steps.date.outputs.date }}
