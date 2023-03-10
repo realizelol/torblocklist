@@ -193,7 +193,6 @@
 2a01:7e00::f03c:91ff:fe56:2656
 2a01:7e00::f03c:93ff:fef8:bd9b
 2a01:7e01::f03c:93ff:fef8:bd60
-2a01:367:c1f2:0:235:fdff:fee6:f88c
 2a01:4262:1ab:ffff::130
 2a01:4262:1ab:ffff::131
 2a01:4262:1ab:ffff::133
