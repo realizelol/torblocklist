@@ -288,7 +288,6 @@
 2a03:4000:15:928:dead:beef:ca1f:1337
 2a03:4000:15:ade:982a:22ff:fe1a:aa32
 2a03:4000:17:5c:24df:84ff:fe54:82aa
-2a03:4000:17:27:46a:f7ff:fe1b:fb06
 2a03:4000:17:a15:d4db:fbff:fef4:8b7b
 2a03:4000:21:8a8:dead:beef:ca1f:1337
 2a03:4000:27:5d:34ac:82ff:feb6:2d2c
