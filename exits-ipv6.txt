@@ -181,6 +181,7 @@
 2a00:1b88:4::2
 2a00:1dc0:caff:8b::5b9a
 2a00:1dc0:caff:15::45dc
+2a00:1dc0:caff:25::3a48
 2a00:1dc0:caff:73::d735
 2a00:1dc0:caff:138::94d2
 2a00:1dc0:caff:189::3582
