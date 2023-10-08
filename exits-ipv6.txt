@@ -166,6 +166,7 @@
 2a00:1b88:4::3
 2a00:1dc0:caff:8b::24bd
 2a00:1dc0:caff:15::45dc
+2a00:1dc0:caff:17::2e4b
 2a00:1dc0:caff:25::3a48
 2a00:1dc0:caff:73::d735
 2a00:1dc0:caff:138::94d2
