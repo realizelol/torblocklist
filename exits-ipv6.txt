@@ -2,7 +2,6 @@
 2a0a:4cc0:1:101:a463:1eff:fee1:4874
 2a0a:4cc0:3:bb:7865:65ff:fe6d:7fd4
 2a0a:4cc0:3:c6:887f:3dff:feab:e676
-2a0a:4cc0:2000:2012:f3c1:8a5e:dead:beef
 2a0a:3840:1337:125:0:b9c1:7d57:1337
 2a0a:c801:1:5::5d
 2a0b:f4c0:16c:1::1
