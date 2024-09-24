@@ -213,6 +213,7 @@
 2a0f:93c1:26:1f2::9ce5
 2a0f:5707:aaef:282::1
 2a0f:5707:aaef:390::1
+2a0f:ca80:0:e57f::82e1:3f1b
 2a0f:df00:0:255::194
 2a0f:df00:0:255::195
 2a0f:df00:0:255::196
@@ -238,6 +239,8 @@
 2a00:1dc0:caff:8b::24bd
 2a00:1dc0:caff:12c::4d3a
 2a00:1dc0:caff:15::45dc
+2a00:1dc0:caff:17e::c85a
+2a00:1dc0:caff:17f::4bcd
 2a00:1dc0:caff:44::326d
 2a00:1dc0:caff:73::a568
 2a00:1dc0:caff:88::b2ec
