@@ -213,6 +213,7 @@
 2a0e:bfc7:0:7::dead:beef
 2a0e:bfc7:300:6a::bd59
 2a0e:bfc7:300:66::52be
+2a0e:bfc7:1400:3499::1
 2a0e:bfc7::216:3cff:fe3a:4ee4
 2a0e:bfc7::216:3cff:fe6f:c4ca
 2a0e:bfc7::216:3cff:feae:41de
