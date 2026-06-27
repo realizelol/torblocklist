@@ -213,6 +213,8 @@
 2a0e:bfc0:0:f::4558:4954
 2a0e:bfc2:0:1b::1
 2a0e:bfc2:0:5::36d5
+2a0e:bfc7:0:8::c0ca:cafe
+2a0e:bfc7:0:8::dead:cafe
 2a0e:bfc7:100:2b::eb48
 2a0e:bfc7:1400:3499::1
 2a0e:bfc7::216:3cff:fe6d:b40
@@ -390,6 +392,9 @@
 2a09:61c0::33
 2a09:61c0::34
 2a09:61c0::beef
+2a09:be40:28ff:50:b436:f5ff:fef5:a154
+2a09:be40:28ff:50:be24:11ff:fe5f:80d4
+2a09:be40:28ff:50:be24:11ff:fe7d:fe66
 2a09:be40:28ff:50:c4c9:3dff:fea3:f4fa
 2a10:8a40:f313::29
 2a10:c800:1:9cc6::1
@@ -569,7 +574,6 @@
 2600:3c0a::f03c:95ff:fe5d:a877
 2600:3c0b::2000:23ff:fef7:843d
 2600:3c0b::f03c:95ff:fefa:bdff
-2600:3c00::f03c:91ff:fe73:f9ba
 2600:3c00::f03c:95ff:fe5d:8f00
 2600:3c03::f03c:95ff:fe5d:562
 2600:3c04::f03c:95ff:fe41:d42c
