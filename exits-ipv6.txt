@@ -208,6 +208,7 @@
 2a0e:bfc0:0:11::796d
 2a0e:bfc2:0:1b::1
 2a0e:bfc2:0:5::36d5
+2a0e:bfc7:0:8::dead:cafe
 2a0e:bfc7:100:2b::eb48
 2a0e:bfc7:300:bc::8675
 2a0e:bfc7:300:c0::734c
