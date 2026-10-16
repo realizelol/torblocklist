@@ -196,6 +196,7 @@
 2a0e:bfc7::216:3cff:fe6d:b40
 2a0e:bfc7::216:3cff:fe6f:c4ca
 2a0e:bfc7::216:3cff:fefa:3a73
+2a0e:bfc7::5054:ff:fed6:dc14
 2a0e:bfc7::b6b5:2fff:fe6a:84bc
 2a0e:e701:1198::1
 2a0f:ca80:b00b:270::5
@@ -360,7 +361,6 @@
 2a09:61c0::44
 2a09:61c0::45
 2a09:61c0::46
-2a09:61c0::beef
 2a10:8a40:f313::29
 2a10:c800:1:9cc6::1
 2a10:c800:1:f7f8:0:1ce:1ce:babe
