@@ -192,11 +192,13 @@
 2a0e:bfc0:0:1c::426a
 2a0e:bfc0:0:34::4378
 2a0e:bfc2:0:1b::1
+2a0e:bfc2:0:3f::9473
 2a0e:bfc7:100:2b::eb48
 2a0e:bfc7:300:15::10
 2a0e:bfc7:300:91::57ec
 2a0e:bfc7:300:bc::8675
 2a0e:bfc7:300:c0::734c
+2a0e:bfc7:400:3::48ac
 2a0e:bfc7::216:3cff:fe6d:b40
 2a0e:bfc7::216:3cff:fe6f:c4ca
 2a0e:bfc7::5054:ff:fe68:b979
